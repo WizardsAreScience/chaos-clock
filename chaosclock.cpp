@@ -101,9 +101,9 @@ void Pixel::ComputeFullSDev()
  //calculate these once to save loop time.
  int blockmax = floor(sqrt(tintervals.size()));
  int blocksize = 1; //current size of block. Again, a time saving device.
- int i = 0; 
  int part = 0;
 
+ int i = 0;
 
   for(; blocksize < blockmax; blocksize++)
     {
@@ -111,10 +111,10 @@ void Pixel::ComputeFullSDev()
       partsdev = 0;
       
       blockmean += mean;
-      for(int i = 0; i < tintervals.size(); i += blocksize);
+      for(i = 0; i < tintervals.size(); i += blocksize);
       {
-	for(part = i; part < (i + blocksize); part++) partsdev += tintervals[part];
-	tempsdev += (blockmean - partsdev)*(blockmean - partsdev); //square
+        for(part = i; part < (i + blocksize); part++) partsdev += tintervals[part];
+        tempsdev += (blockmean - partsdev)*(blockmean - partsdev); //square
       }
       if (tempsdev > 0) //deviation exists
          tempsdev = sqrt(tempsdev / tintervals.size()*blocksize); //root mean

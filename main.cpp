@@ -83,6 +83,5 @@ int main()
  }
  recorder.close();
  cout << "Program Complete\n";
- system("PAUSE");
  return 0;
 }

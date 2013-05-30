@@ -8,7 +8,7 @@
 #include <math.h>
 #include <vector>
 #include <fstream>
-#include <windows.h>
+//#include <windows.h>
 
 using namespace std;
 
